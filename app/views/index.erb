@@ -7,7 +7,7 @@
   <body>
     <h1>Blog post log</h1>
     <% @post.each.with_index do |p, i| %>
-      <h2># <%= i +1 %></h2>
+      <h2>Post # <%= i +1 %></h2>
       <p>Title: <%= p.name %></p>
       <p>Content: <%= p.content %></p>
       <p>Post by ID: <%= p.id %></p>
