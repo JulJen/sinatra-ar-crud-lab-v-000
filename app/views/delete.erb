@@ -6,6 +6,8 @@
   </head>
   <body>
     <h1>Deleted posts: </h1>
-    <%= @post.name %></h1>
+    <% @post.each.with_index do |p, i| %>
+      <h2>Post no. <%= i +1 %></h2>
+      <p>Title: <%= p.name %></p>
   </body>
 </html>
