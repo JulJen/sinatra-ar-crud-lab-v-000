@@ -6,10 +6,16 @@
   </head>
   <body>
     <h1>Update your post: </h1>
-    <% @post.each.with_index do |p, i| %>
-      <h2>Post no. <%= i +1 %></h2>
-      <p>Title: <%= p.name %></p>
-      <p>Content: <%= p.content %></p>
-    <% end %>
+    <form action="/posts/<%=@post.id%>" method="POST">
+      <!-- <label for="name">Name:</label> -->
+      <p>Blog post name: <input id="hidden" type="hidden" name="_method" value="patch"></p>
+
+      <!-- <label for="content">Content:</label> -->
+      <p>Post content: <input type="text" name="content"></p>
+
+      <input id="submit" type="submit" value="Submit">
+      
+    </form>
+
   </body>
 </html>
