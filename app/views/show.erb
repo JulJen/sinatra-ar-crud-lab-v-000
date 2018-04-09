@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Post Title: <%= @post.name %></h1>
-    <p>Post Content: <%= @post.conten t%></p>
+    <p>Post Content: <%= @post.content %></p>
 
     <form action="/posts/<%= @post.id %>/delete" method="POST">
       <input id="hidden" type="hidden" name="_method" value="delete">
