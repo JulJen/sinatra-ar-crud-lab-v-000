@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <h1>Update your post: </h1>
+    <% @post.each.with_index do |p, i| %>
+      <h2>Post no. <%= i +1 %></h2>
+      <p>Title: <%= p.name %></p>
+      <p>Content: <%= p.content %></p>
+    <% end %>
+  </body>
+</html>
