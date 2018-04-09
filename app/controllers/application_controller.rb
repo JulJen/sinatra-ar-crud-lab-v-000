@@ -55,23 +55,4 @@ class ApplicationController < Sinatra::Base
    erb :delete
  end
 
- get '/posts/:id/edit' do
-   @post = Post.find(params[:id])
-   erb :edit
- end
-
- patch '/posts/:id' do
-   @post = Post.find(params[:id])
-   @post.name = params[:name]
-   @post.content = params[:content]
-   @post.save
-
-   erb :show
- end
-
- delete '/posts/:id/delete' do
-   Post.find(params[:id]).destroy
-   erb :delete
- end
-
 end
