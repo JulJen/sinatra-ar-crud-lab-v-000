@@ -61,6 +61,7 @@ class ApplicationController < Sinatra::Base
  end
 
  patch '/posts/:id' do
+   @post = Post.update
    erb :show
  end 
 
