@@ -7,14 +7,12 @@
   <body>
     <h1>Update your post: </h1>
     <form action="/posts/<%=@post.id%>" method="POST">
-      <!-- <label for="name">Name:</label> -->
-      <p>Blog post name: <input id="hidden" type="hidden" name="_method" value="patch"></p>
+      <input id="hidden" type="hidden" name="_method" value="patch">
 
-      <!-- <label for="content">Content:</label> -->
-      <p>Post content: <input type="text" name="content"></p>
+      <p>Edit name: <input type="text" value="<%= @post.name %>" name="name"></p>
+      <p>Edit content: <input type="text" value="<%= @post.content %>" name="content"></p>
 
       <input id="submit" type="submit" value="Submit">
-      
     </form>
 
   </body>
