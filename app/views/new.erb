@@ -6,8 +6,9 @@
   </head>
   <body>
     <h1>Add new blog post:</h1>
-
-    <form action="/posts" method="POST">
+    <form action="/posts/<%=@post.id%>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      
       <p>Blog post name: <input type="text" name="name"></p>
       <p>Post content: <input type="text" name="content"></p>
 
