@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
     @post = Post.find_by_id(params[:id])
     # @post = Post.find(params[:id])
 binding.pry
-   erb :show
+    erb :show
   end
 
 #UPDATE
