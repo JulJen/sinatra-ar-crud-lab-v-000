@@ -66,7 +66,6 @@ class ApplicationController < Sinatra::Base
    @post.content = params[:content]
    @post.save
 
-  #  @post_update = Post.find(params[:id],{:name => params[:name], :content => params[:content]})
    erb :show
  end
 
